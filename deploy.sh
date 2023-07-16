@@ -1,25 +1,25 @@
 #!/usr/bin/env sh
 
-# abort on errors
+# 确保脚本抛出遇到的错误
 set -e
 
-# build
-vuepress build docs
+# push_addr=`git remote get-url --push origin` # git提交地址，也可以手动设置，比如：push_addr=git@github.com:xugaoyi/vuepress-theme-vdoing.git
+push_addr=git@github.com:858715831/858715831.github.io.git
+commit_info=`git describe --all --always --long` # 打包生成的文件夹路径
+dist_path=docs/.vuepress/dist # 推送的分支
 
-# navigate into the build output directory
-cd docs/.vuepress/dist
+push_branch=gh-pages
 
-# if you are deploying to a custom domain
-# echo 'www.example.com' > CNAME
+# 生成静态文件
+npm run build
+
+# 进入生成的文件夹
+cd $dist_path
 
 git init
 git add -A
-git commit -m 'deploy'
-
-# if you are deploying to https://<USERNAME>.github.io
-# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
-
-# if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:858715831/858715831.github.io.git master:gh-pages
+git commit -m "deploy, $commit_info"
+git push -f $push_addr HEAD:$push_branch
 
 cd -
+rm -rf $dist_path

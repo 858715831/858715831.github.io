@@ -1,22 +1,13 @@
-# npm
-package-lock.json
-node_modules
+# VuePress files
+docs/.vuepress/.temp/
+docs/.vuepress/.cache/
+docs/.vuepress/dist/
 
-# yarn
-yarn.lock
-yarn-error.log
+# Node modules
+node_modules/
 
-# pnpm
-pnpm-lock.yaml
-
-# vscode
-.vscode
-
-# vuepress
-docs/.vuepress/dist
-
-# 百度链接推送
-urls.txt
-
-# mac
+# MacOS Desktop Services Store
 .DS_Store
+
+# Log files
+*.log

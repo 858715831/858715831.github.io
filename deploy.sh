@@ -24,13 +24,13 @@
 # cd -
 # rm -rf $dist_path
 
-# # 确保脚本抛出遇到的错误
-# set -e
-# npm run build # 生成静态文件
-# cd docs/.vuepress/dist # 进入生成的文件夹
+# 确保脚本抛出遇到的错误
+set -e
+npm run build # 生成静态文件
+cd docs/.vuepress/dist # 进入生成的文件夹
 
-# # deploy to github
-# # echo 'blog.xugaoyi.com' > CNAME
+# deploy to github
+# echo 'blog.xugaoyi.com' > CNAME
 if [ -z "$GITHUB_TOKEN" ]; then
   msg='deploy'
   githubUrl=git@github.com:858715831/858715831.github.io.git

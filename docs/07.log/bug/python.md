@@ -1,3 +1,16 @@
+---
+title: python
+date: 2023-07-24 11:04:43
+permalink: /pages/2e2541/
+categories:
+  - log
+  - bug
+tags:
+  - 
+author: 
+  name: yst
+  link: https://github.com/858715831
+---
 
 报错：
 ValueError: Timeout value connect was <object object at 0x0000019A00694540>, but it must be an int, float or None.

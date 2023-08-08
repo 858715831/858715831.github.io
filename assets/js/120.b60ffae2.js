@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[120],{447:function(t,n,s){"use strict";s.r(n);var e=s(4),o=Object(e.a)({},(function(){var t=this._self._c;return t("ContentSlotsDistributor",{attrs:{"slot-key":this.$parent.slotKey}},[t("p",[this._v("第七条【劳动关系的建立】用人单位自用工之日起即与劳动者建立劳动关系。用人单位应当建立职工名册备查")])])}),[],!1,null,null,null);n.default=o.exports}}]);
